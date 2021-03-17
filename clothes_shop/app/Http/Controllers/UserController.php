@@ -1,0 +1,82 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Exceptions\TokenExpiredException;
+use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use Tymon\JWTAuth\Facades\JWTAuth;
+
+class UserController extends Controller
+{
+    public function showRegister()
+    {
+        return view('frontend.signup');
+    }
+
+    public function register(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'username' => 'required|string|max:100|',
+            'gender' => 'required|',
+            'birth' => 'required|',
+            'phone' => 'required|string|max:11|unique:users',
+            'email' => 'required|string|email|max:255|unique:users',
+            'address' => 'required|',
+            'password' => 'required|string|min:6|max:8|confirmed',
+        ]);
+        if ($validator->fails())
+        {
+            return redirect()->route('user_signup')
+            ->withErrors($validator)
+            ->withInput();
+        }
+        User::create([
+            'username' => $request->get('username'),
+            'gender' => $request->get('gender'),
+            'birth' => $request->get('birth'),
+            'phone' => $request->get('phone'),
+            'email' => $request->get('email'),
+            'address' => $request->get('address'),
+            'password' => Hash::make($request->get('password')),
+        ]);
+        $user = User::first();
+        $token = JWTAuth::fromUser($user);
+        return redirect()->route("show_signup");
+    }
+
+    public function login(Request $request)
+    {
+        $login = $request->only('username', 'password');
+        try {
+            if (!$token = JWTAuth::attempt($login)) {
+                return response()->json(['error' => 'invalid_credentials'], 400);
+            }
+        } catch (JWTException $e) {
+            return response()->json(['error' => 'could_not_create_token'], 500);
+        }
+        return redirect()->route("show_last_product");
+    }
+
+    public function getAuthenticatedUser()
+    {
+        try {
+            if (!$user = JWTAuth::parseToken()->authenticate()) {
+                return response()->json(['user_not_found'], 404);
+            }
+        } catch (TokenExpiredException $e) {
+            return response()->json(['token_expired'], $e->getStatusCode());
+        } catch (TokenInvalidException $e) {
+            return response()->json(['token_invalid'], $e->getStatusCode());
+        } catch (JWTException $e) {
+            return response()->json(['token_absent'], $e->getStatusCode());
+        }
+        return response()->json(compact('user'));
+    }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Case-Module4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Case-module3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CaseStudy_webbansach" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DCM_MP3_Laravel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Giohang/shopping-cart-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GymMP3_Module5" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PROJECT-ANGULAR-MP3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/angular-8-crud-with-backendapi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/angular-exam-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/angular-exam-server/test-module4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bootstrap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/checkEmail" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/choose" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/customer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/customer-restful" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/customers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/customers/laravel-bc-php-wbdl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/customersValidation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/demo-aThao/laravel-lession-03-controller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/docs.module4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fizz_buzz" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fizz_buzz_prepared" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/font-size" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hackernew" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/input-output" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/laravel-bc-php-wbdl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/laravel-security" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lession8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/login-logout" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module4/bai1/demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/name-card" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/progress-bar" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/shopping-cart-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test-module4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/test_module3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/time-live" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/todo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/typescript-demo" vcs="Git" />
+  </component>
+</project>
